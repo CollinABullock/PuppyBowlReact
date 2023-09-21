@@ -9,10 +9,13 @@ function App() {
 
   return (
     <>
-    <div className='newPlayer'>
-      <NewPlayerForm />
-    </div>
+      
+      <div className='newPlayerForm'>
+        <NewPlayerForm />
+      </div>
+      
       <h1>Puppy Bowl</h1>
+
     <Routes>
       <Route path="/" element={<AllPlayers />} />
       <Route path="/:id" element={<SinglePlayer />} />
