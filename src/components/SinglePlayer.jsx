@@ -18,11 +18,11 @@ export default function SinglePlayer() {
 
  useEffect(() => {
   async function getSinglePlayer() {
-    const APIresponse = await fetchSinglePlayer(id);
-    if (APIresponse.success) {
-      setPlayer(APIresponse.data.player)
+    const response = await fetchSinglePlayer(id);
+    if (response.success) {
+      setPlayer(response.data.player)
     } else { 
-      setError(APIresponse.error.message)
+      setError(response.error.message)
     }
   }
   getSinglePlayer()
@@ -32,7 +32,7 @@ export default function SinglePlayer() {
     <>
     <h1>{player && player.name}</h1>
     <h1>{player && player.breed}</h1>
-    <img src="{player && player.imageurl}" alt="Doggo Pic" />
+    <img src={player && player.imageurl} alt="Doggo Pic" />
     <button onClick={goBack}>Go Back!</button>
     </>
   )
