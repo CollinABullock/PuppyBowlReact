@@ -16,10 +16,12 @@ function App() {
       
       <h1>Puppy Bowl</h1>
 
+<div className='routes'>
     <Routes>
       <Route path="/" element={<AllPlayers />} />
       <Route path="/:id" element={<SinglePlayer />} />
     </Routes>
+    </div>
     </>
   )
 }
