@@ -3,16 +3,12 @@ import './App.css'
 import AllPlayers from './components/AllPlayers'
 import { Routes, Route, Link, useNavigate } from "react-router-dom"; 
 import SinglePlayer from './components/SinglePlayer';
-import NewPlayerForm from './components/NewPlayer';
+import NewPlayerForm from './components/NewPlayerForm';
 
 function App() {
 
   return (
     <>
-      
-      <div className='newPlayerForm'>
-        <NewPlayerForm />
-      </div>
       
       <h1>Puppy Bowl</h1>
 
@@ -22,6 +18,10 @@ function App() {
       <Route path="/:id" element={<SinglePlayer />} />
     </Routes>
     </div>
+
+    <h1>Enter Your Own Doggy!</h1>
+    <NewPlayerForm />
+
     </>
   )
 }

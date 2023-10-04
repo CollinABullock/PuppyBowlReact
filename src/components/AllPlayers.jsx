@@ -1,16 +1,13 @@
 import { useState, useEffect } from "react";
 import { FetchAllPlayers } from "../API/FetchAllPlayers";
-import SinglePlayer from "./SinglePlayer";
-import { useNavigate } from "react-router-dom";
 import PlayerListName from "./PlayerListName";
 
 export default function AllPlayers() {
   const [players, setPlayers] = useState([]);
-  const [Error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const [searchParams, setSearchParams] = useState("");
   console.log(searchParams);
 
-  const navigate = useNavigate();
   useEffect (() => {
     async function getAllPlayers() {
       const response = await FetchAllPlayers();
@@ -26,6 +23,9 @@ export default function AllPlayers() {
   const displayedPlayers = searchParams ? players.filter((player) =>
     player.name.toLowerCase().includes(searchParams)
   ) : players;
+
+  console.log(displayedPlayers);
+  console.log(players);
 
   return (
     <>

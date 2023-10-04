@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import fetchSinglePlayer from "../API/FetchSinglePlayer";
+import { fetchSinglePlayer } from "../API/FetchSinglePlayer";
 
-const API = "https://fsa-puppy-bowl.herokuapp.com/api/2306-FTB-ET-WEB-AM/players";
 
 export default function SinglePlayer() {
   const [player, setPlayer] = useState(null);
@@ -30,9 +29,8 @@ export default function SinglePlayer() {
 
   return (
     <>
-    <h1>{player && player.name}</h1>
-    <h1>{player && player.breed}</h1>
-    <img src={player && player.imageurl} alt="Doggo Pic" />
+    <img src="{player && player.imageurl}" alt="Doggo Pic" /><br />
+    <h1>{player && player.name} is a {player && player.breed} and is a very good boy!</h1><br />
     <button onClick={goBack}>Go Back!</button>
     </>
   )
