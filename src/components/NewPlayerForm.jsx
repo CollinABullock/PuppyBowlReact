@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CreateDoggy } from "./CreateDoggy";
+
 
 export default function NewPlayerForm( {players, setPlayers}) {
   const [name, setName] = useState("");
@@ -7,22 +7,16 @@ export default function NewPlayerForm( {players, setPlayers}) {
   const [image, setImage] = useState("");
   const [error, setError] = useState(null);
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const APIData = await CreateDoggy(name, breed, image);
-    if (APIData.success) {
-      console.log("New Player: ", APIData.data.newPlayer);
 
-      const NewPlayersList = [...players, APIData.data.newPlayer];
-      setPlayers(NewPlayersList);
-      setName("");
-      setBreed("");
-      setImage("");
+    try {
+      const result = await createPost(name, breed, image);
+      // navigate('/products');
+    } catch (error) {
+      console.log(error);
     }
-    else {
-      setError(APIData.error.message)
-    }
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>

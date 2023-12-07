@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const API = "https://fsa-puppy-bowl.herokuapp.com/api/2306-FTB-ET-WEB-AM";
 
-export async function CreateDoggy()  {
+export function CreateDoggy()  {
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
   const [image, setImage] = useState("");
