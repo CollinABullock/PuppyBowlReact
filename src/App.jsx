@@ -3,7 +3,7 @@ import './App.css'
 import AllPlayers from './components/AllPlayers'
 import { Routes, Route, Link, useNavigate } from "react-router-dom"; 
 import SinglePlayer from './components/SinglePlayer';
-import NewPlayerForm from './components/NewPlayerForm';
+import { CreateDoggy } from './components/CreateDoggy';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
     </div>
 
     <h1>Enter Your Own Doggy!</h1>
-    <NewPlayerForm />
+    <CreateDoggy />
 
     </>
   )

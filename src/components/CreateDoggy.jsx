@@ -56,5 +56,30 @@ const handleBreedChange = (e) => {
 const handleImageChange = (e) => {
   setImage(e.target.value);
 };
+
+return (
+  <form onSubmit={handleSubmit}>
+    {error && <p>{error}</p>}
+    <input 
+    type="text"
+    name="name" 
+    placeholder="What is the doggo's name?"
+    onChange={handleNameChange}
+    /><br/>
+    <input 
+    type="text"
+    name="breed" 
+    placeholder="What is the doggo's breed"
+    onChange={handleBreedChange}
+    /><br />
+    <input 
+    type="text"
+    name="image-link" 
+    placeholder="Paste a URL of your dog's picture"
+    onChange={handleImageChange}
+    /><br />
+    <button>Submit</button>
+  </form>
+);
   }
 
