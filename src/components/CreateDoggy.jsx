@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const API = "https://fsa-puppy-bowl.herokuapp.com/api/2306-FTB-ET-WEB-AM";
+
 
 export function CreateDoggy()  {
   const [name, setName] = useState("");
