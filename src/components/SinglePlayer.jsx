@@ -29,7 +29,7 @@ export default function SinglePlayer() {
 
   return (
     <>
-    <img src="https://ik.imagekit.io/smoregear/woman%20hiking.jpg?updatedAt=1700852561792" /><br />
+    <img src="`${player.imageurl}`" /><br />
     <h1>{player && player.name} is a {player && player.breed} and is a very good boy!</h1><br />
     <button onClick={goBack}>Go Back!</button>
     </>
