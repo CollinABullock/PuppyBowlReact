@@ -29,7 +29,7 @@ export default function SinglePlayer() {
 
   return (
     <>
-    <img src="{player && player.imageurl}" alt="Doggo Pic" /><br />
+    <img src={player.imageUrl} alt="Doggo Pic" /><br />
     <h1>{player && player.name} is a {player && player.breed} and is a very good boy!</h1><br />
     <button onClick={goBack}>Go Back!</button>
     </>
