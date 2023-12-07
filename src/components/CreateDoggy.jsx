@@ -59,7 +59,7 @@ const handleImageChange = (e) => {
 };
 
 return (
-  <form onSubmit={handleSubmit}>
+  <form>
     {error && <p>{error}</p>}
     <input 
     type="text"
@@ -79,7 +79,7 @@ return (
     placeholder="Paste a URL of your dog's picture"
     onChange={handleImageChange}
     /><br />
-    <button>Submit</button>
+    <button onClick={handleSubmit}>Submit</button>
   </form>
 );
   }
