@@ -3,7 +3,7 @@ import './App.css'
 import AllPlayers from './components/AllPlayers2';
 import { Routes, Route, Link, useNavigate, BrowserRouter } from "react-router-dom"; 
 import SinglePlayer from './components/SinglePlayer';
-import NewPlayerForm from './components/NewPlayerForm';
+import CreateDoggy from './components/newPlayerForm2';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<AllPlayers />} />
       <Route path="/:id" element={<SinglePlayer />} />
-      <Route path="/newPlayerForm" element={<NewPlayerForm />} />
+      <Route path="/newPlayerForm" element={<CreateDoggy />} />
       
 
     </Routes>
