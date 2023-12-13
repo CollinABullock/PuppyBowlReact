@@ -13,7 +13,7 @@ function App() {
     
 
 <div className='routes'>
-<BrowserRouter>
+
     <Routes>
       <Route path="/" element={<AllPlayers />} />
       <Route path="/:id" element={<SinglePlayer />} />
@@ -21,7 +21,7 @@ function App() {
       
 
     </Routes>
-    </BrowserRouter>
+   
     </div>
 
     </>
