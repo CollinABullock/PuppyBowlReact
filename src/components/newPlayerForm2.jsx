@@ -111,6 +111,11 @@ const handleImageChange = (e) => {
                   name="name"
                   autoComplete="name"
                   className='inputField'
+                  InputLabelProps={{
+                    style: { color: 'white' } }}
+                    InputProps={{
+                      style: { color: 'white' } // Change input text color to white
+                    }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -123,6 +128,11 @@ const handleImageChange = (e) => {
                   name="breed"
                   autoComplete="breed"
                   className='inputField'
+                  InputLabelProps={{
+                    style: { color: 'white' } }}
+                    InputProps={{
+                      style: { color: 'white' } // Change input text color to white
+                    }}
                 />
               </Grid>
               <Grid item xs={12}>
@@ -135,6 +145,11 @@ const handleImageChange = (e) => {
                   name="image"
                   autoComplete="image"
                   className='inputField'
+                  InputLabelProps={{
+                    style: { color: 'white' } }}
+                    InputProps={{
+                      style: { color: 'white' } // Change input text color to white
+                    }}
                 />
               </Grid>
             </Grid>
@@ -142,7 +157,7 @@ const handleImageChange = (e) => {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
             >
               Submt your doggy!
             </Button>
