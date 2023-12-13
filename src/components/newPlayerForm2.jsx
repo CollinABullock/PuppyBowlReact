@@ -15,9 +15,7 @@ function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-
       Collin A. Bullock
-
       {new Date().getFullYear()}
       {'.'}
     </Typography>
@@ -83,10 +81,11 @@ const handleImageChange = (e) => {
 };
 
   return (
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <>
     <NavBar />
     {/* <ThemeProvider theme={defaultTheme} > */}
-      <Container component="main" maxWidth="xs" >
+    <Container component="main" maxWidth="xs" >
         <CssBaseline />
         
         <Box
@@ -111,6 +110,7 @@ const handleImageChange = (e) => {
                   label="What is your doggy's name?"
                   name="name"
                   autoComplete="name"
+                  className='inputField'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -122,6 +122,7 @@ const handleImageChange = (e) => {
                   label="What is your doggy's breed?"
                   name="breed"
                   autoComplete="breed"
+                  className='inputField'
                 />
               </Grid>
               <Grid item xs={12}>
@@ -133,6 +134,7 @@ const handleImageChange = (e) => {
                   label="Paste a link to your doggy's picture"
                   name="image"
                   autoComplete="image"
+                  className='inputField'
                 />
               </Grid>
             </Grid>
@@ -154,5 +156,6 @@ const handleImageChange = (e) => {
       </Container>
     {/* </ThemeProvider> */}
     </>
+    </div>
   );
 }
