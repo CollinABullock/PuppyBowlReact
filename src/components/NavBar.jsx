@@ -1,5 +1,6 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -12,6 +13,11 @@ import Button from '@mui/material/Button';
 
 import MenuItem from '@mui/material/MenuItem';
 
+const defaultTheme = createTheme({
+  typography: {
+    fontFamily: 'cursive', // Or 'fantasy'
+  },
+});
 
 
 const pages = [
@@ -36,10 +42,11 @@ export default function NavBar() {
  
 
   return (
+<ThemeProvider theme={defaultTheme}>
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
       <Container maxWidth="xl" sx={{alignContent: "center"}} >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "15%", maxHeight: "15%", borderRadius: "30px", margin: "0 auto"}} />
+         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", maxHeight: "%", borderRadius: "30px", margin: "0 auto"}} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
          
@@ -85,14 +92,14 @@ export default function NavBar() {
               <Button
                 href='/'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "Roboto" }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy" }}
               >
                See All Doggies!
               </Button>
               <Button
                 href='/newPlayerForm'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "Roboto" }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy !important" }}
               >
                Add Your Doggy!
               </Button>
@@ -102,5 +109,6 @@ export default function NavBar() {
       </Container>
       
     </AppBar>
+    </ThemeProvider>
   );
 }

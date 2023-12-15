@@ -68,7 +68,7 @@ export default function SinglePlayer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <NavBar />
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '100%' }}>
         <CssBaseline />
        
         <Grid
@@ -85,7 +85,7 @@ export default function SinglePlayer() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{maxHeight: "50%"}}>
           <Box
             sx={{
               my: 8,
@@ -94,15 +94,13 @@ export default function SinglePlayer() {
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: "center",
-              width: "80%"
+              width: "80%",
+              height: "100vw"
             }}
           >
-            <Typography component="h2" variant="h2" sx={{maxWidth: "50vw"}}>
+            <Typography component="h2" variant="h2" sx={{maxWidth: "50vw", maxHeight: "50px"}}>
               {player.name} is a {player.breed} and is a very good boy!
             </Typography>
-           
-            
-             
             </Box>
         
         </Grid>
