@@ -39,9 +39,10 @@ export default function NavBar() {
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
       <Container maxWidth="xl" sx={{alignContent: "center"}} >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "50%", maxHeight: "50%", borderRadius: "30px", margin: "0 auto"}} />
+         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "15%", maxHeight: "15%", borderRadius: "30px", margin: "0 auto"}} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
+         
             <IconButton
               
               aria-label="Menu"
@@ -49,7 +50,7 @@ export default function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{marginLeft: "auto",}}
+              sx={{marginLeft: "auto", padding: "20px"}}
             >
               <MenuIcon />
             </IconButton>
@@ -79,25 +80,7 @@ export default function NavBar() {
             </Menu>
           </Box>
       
-          {/* <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'comic-sans',
-              fontWeight: 700,
-              fontSize: "3rem",
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Puppy Bowl - Woof Woof!
-          </Typography> */}
+         
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "space-evenly", fontSize: "2em", fontWeight: "20", color: "#000814"}, backgroundColor: "#d62828", padding: "30px" }}>
               <Button
                 href='/'

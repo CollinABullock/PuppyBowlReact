@@ -12,6 +12,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect} from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import NavBar from './NavBar';
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -65,8 +67,10 @@ export default function SinglePlayer() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
+      <NavBar />
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
+       
         <Grid
           item
           xs={false}
@@ -89,19 +93,34 @@ export default function SinglePlayer() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              textAlign: "center"
+              textAlign: "center",
+              width: "80%"
             }}
           >
-            <Typography component="h1" variant="h1">
+            <Typography component="h2" variant="h2" sx={{maxWidth: "50vw"}}>
               {player.name} is a {player.breed} and is a very good boy!
             </Typography>
            
             
-              <Copyright sx={{ mt: 5 }} />
+             
             </Box>
         
         </Grid>
       </Grid>
+      <Box sx={{ bgcolor: '#d62828', p: 6, marginTop: "10px" }} component="footer">
+      <Typography variant="h6" align="center" gutterBottom>
+         Puppy Bowl
+        </Typography>
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="text.secondary"
+          component="p"
+        >
+          Woof Woof!
+        </Typography>
+        <Copyright />
+      </Box>
     </ThemeProvider>
   );
 }
