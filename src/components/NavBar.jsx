@@ -11,7 +11,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+
 
 
 const pages = [
@@ -37,18 +37,19 @@ export default function NavBar() {
 
   return (
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
-      <Container maxWidth="xl" >
+      <Container maxWidth="xl" sx={{alignContent: "center"}} >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/G0jDcpS/puppy-bowl.jpg" alt="puppy-bowl" />
+         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "50%", maxHeight: "50%", borderRadius: "30px", margin: "0 auto"}} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
             <IconButton
-              size="large"
+              
               aria-label="Menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{marginLeft: "auto",}}
             >
               <MenuIcon />
             </IconButton>
@@ -57,12 +58,12 @@ export default function NavBar() {
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: 'bottom',
-                horizontal: 'left',
+                horizontal: 'center',
               }}
               keepMounted
               transformOrigin={{
                 vertical: 'top',
-                horizontal: 'left',
+                horizontal: 'center',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
@@ -77,8 +78,8 @@ export default function NavBar() {
               ))}
             </Menu>
           </Box>
-          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
-          <Typography
+      
+          {/* <Typography
             variant="h5"
             noWrap
             component="a"
@@ -96,7 +97,7 @@ export default function NavBar() {
             }}
           >
             Puppy Bowl - Woof Woof!
-          </Typography>
+          </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "space-evenly", fontSize: "2em", fontWeight: "20", color: "#000814"}, backgroundColor: "#d62828", padding: "30px" }}>
               <Button
                 href='/'
