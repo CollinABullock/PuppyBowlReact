@@ -14,7 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 
-const pages = ["See All Doggies", 'Add Your Doggy'];
+const pages = [
+  { title: "See All Doggies", url: "/", id: "1" },
+  { title: "Add Your Doggy", url: "/newPlayerForm", id: "2" }
+];
 
 
 export default function NavBar() {
@@ -36,7 +39,7 @@ export default function NavBar() {
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/G0jDcpS/puppy-bowl.jpg" alt="log" width={400}  />
+         <img src="https://i.ibb.co/G0jDcpS/puppy-bowl.jpg" alt="puppy-bowl" />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
             <IconButton
@@ -68,13 +71,13 @@ export default function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.id} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center" ><a href={page.url}>{page.title}</a></Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
