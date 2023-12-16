@@ -96,7 +96,7 @@ const handleImageChange = (e) => {
             alignItems: 'center',
           }}
         >
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" fontFamily={"GoodBoy"} fontSize="2em">
             Show us your good boy!
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
@@ -112,9 +112,9 @@ const handleImageChange = (e) => {
                   autoComplete="name"
                   className='inputField'
                   InputLabelProps={{
-                    style: { color: 'white' } }}
+                    style: { color: 'white', fontFamily: "GoodBoy" } }}
                     InputProps={{
-                      style: { color: 'white' } // Change input text color to white
+                      style: { color: 'white', fontFamily: "GoodBoy" } // Change input text color to white
                     }}
                 />
               </Grid>
@@ -129,9 +129,9 @@ const handleImageChange = (e) => {
                   autoComplete="breed"
                   className='inputField'
                   InputLabelProps={{
-                    style: { color: 'white' } }}
+                    style: { color: 'white', fontFamily: "GoodBoy" } }}
                     InputProps={{
-                      style: { color: 'white' } // Change input text color to white
+                      style: { color: 'white', fontFamily: "GoodBoy" } // Change input text color to white
                     }}
                 />
               </Grid>
@@ -146,9 +146,9 @@ const handleImageChange = (e) => {
                   autoComplete="image"
                   className='inputField'
                   InputLabelProps={{
-                    style: { color: 'white' } }}
+                    style: { color: 'white', fontFamily: "GoodBoy" } }}
                     InputProps={{
-                      style: { color: 'white' } // Change input text color to white
+                      style: { color: 'white', fontFamily: "GoodBoy" } // Change input text color to white
                     }}
                 />
               </Grid>
@@ -157,7 +157,7 @@ const handleImageChange = (e) => {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2, backgroundColor: "red" }}
+              sx={{ mt: 3, mb: 2, backgroundColor: "red", color: 'white', fontFamily: "GoodBoy", fontSize: "2em" }}
             >
               Submt your doggy!
             </Button>

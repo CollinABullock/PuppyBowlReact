@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 const defaultTheme = createTheme({
   typography: {
-    fontFamily: 'cursive', // Or 'fantasy'
+    fontFamily: "GoodBoy"
   },
 });
 
@@ -46,7 +46,7 @@ export default function NavBar() {
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
       <Container maxWidth="xl" sx={{alignContent: "center"}} >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", maxHeight: "%", borderRadius: "30px", margin: "0 auto"}} />
+         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", maxHeight: "10%", borderRadius: "30px", margin: "0 auto"}} />
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
          
@@ -81,7 +81,7 @@ export default function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page.id} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" ><a href={page.url}>{page.title}</a></Typography>
+                  <Typography textAlign="center" fontFamily={"GoodBoy"} ><a href={page.url}>{page.title}</a></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -99,7 +99,7 @@ export default function NavBar() {
               <Button
                 href='/newPlayerForm'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy !important" }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy" }}
               >
                Add Your Doggy!
               </Button>
