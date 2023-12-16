@@ -68,7 +68,7 @@ export default function AllPlayers() {
           <Container sx={{padding: "20px"}}>
        
             <div className="searchBar" >
-  <label>
+  <label style={{fontSize: "3em"}}>
     Search <br />
     <input
       type="text"
@@ -87,7 +87,7 @@ export default function AllPlayers() {
             {!error && displayedPlayers.map((players) => (
               <Grid item key={players} xs={12} sm={6} md={4}>
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: "#491900", }}
                 >
                <CardMedia
   component="div"
@@ -99,13 +99,13 @@ export default function AllPlayers() {
 />
 
                   <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2">
+                    <Typography gutterBottom variant="h5" component="h2" style={{fontFamily: "GoodBoy", color: "whitesmoke", textAlign: "center", fontSize: "2em"}}>
                       {players.name}
                     </Typography>
                   </CardContent>
-                  <CardActions>
+                  <CardActions sx={{display: "flex", justifyContent: "center"}}>
 
-                    <Button size="small" href={`/${players.id}`}>More Details</Button>
+                    <Button size="small" href={`/${players.id}`} sx={{fontFamily: "GoodBoy", color: "white"}}>More Details</Button>
               
                   </CardActions>
                 </Card>

@@ -76,7 +76,7 @@ export default function NavBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
+                display: { xs: 'block', md: 'none' }, fontSize: "3em"
               }}
             >
               {pages.map((page) => (

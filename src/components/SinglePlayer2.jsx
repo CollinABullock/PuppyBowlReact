@@ -68,7 +68,7 @@ export default function SinglePlayer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <NavBar />
-      <Grid container component="main" sx={{ height: '100%' }}>
+      <Grid container component="main" sx={{ height: '60%' }}>
         <CssBaseline />
        
         <Grid
@@ -83,26 +83,16 @@ export default function SinglePlayer() {
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            width: "20px",
+            borderRadius: "30px"
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{maxHeight: "50%"}}>
-          <Box
-            sx={{
-              my: 8,
-              mx: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              textAlign: "center",
-              width: "80%",
-              height: "100vw"
-            }}
-          >
-            <Typography component="h2" variant="h2" sx={{maxWidth: "50vw", maxHeight: "50px"}}>
+       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', backgroundColor: "#491900", color: "whitesmoke", borderRadius: "30px" }}>
+          <Box sx={{ textAlign: 'center', width: '80%', maxWidth: '70%' }}> 
+            <Typography component="h2" variant="h2" sx={{fontFamily: "GoodBoy"}}>
               {player.name} is a {player.breed} and is a very good boy!
             </Typography>
-            </Box>
-        
+          </Box>
         </Grid>
       </Grid>
       <Box sx={{ bgcolor: '#d62828', p: 6, marginTop: "10px" }} component="footer">
