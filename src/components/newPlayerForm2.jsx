@@ -10,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NavBar from './NavBar';
+import { motion } from "framer-motion"
+
 
 function Copyright(props) {
   return (
@@ -96,10 +98,17 @@ const handleImageChange = (e) => {
             alignItems: 'center',
           }}
         >
+            <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
           <Typography component="h1" variant="h5" fontFamily={"GoodBoy"} fontSize="2em">
             Show us your good boy!
           </Typography>
+          </motion.div>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+        
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField

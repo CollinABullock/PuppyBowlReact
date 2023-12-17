@@ -11,6 +11,18 @@
     url("./components/GoodBoy-ZVJrl.ttf") format("truetype");
 }
 
+/* Define the slide-in animation */
+.slide-in {
+  transition: transform 0.5s ease;
+  transform: translateY(-100%);
+  /* Initial position: off-screen */
+}
+
+.slide-in.active {
+  transform: translateY(0);
+  /* Final position: on-screen */
+}
+
 
 .title {
   margin: 0 auto;

@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
+import { motion } from "framer-motion"
 
 import Button from '@mui/material/Button';
 
@@ -46,10 +47,22 @@ export default function NavBar() {
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
       <Container maxWidth="xl" sx={{alignContent: "center"}} >
         <Toolbar disableGutters >
-         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", maxHeight: "10%", borderRadius: "30px", margin: "0 auto"}} />
+        <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", height: "10%", borderRadius: "30px", margin: "0 auto"}} />
+         </motion.div>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite" }}>
-         
+          <Box
+          
+          sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite",  }}>
+              <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
             <IconButton
               
               aria-label="Menu"
@@ -60,7 +73,9 @@ export default function NavBar() {
               sx={{marginLeft: "auto", padding: "20px"}}
             >
               <MenuIcon />
+              
             </IconButton>
+            </motion.div>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -76,7 +91,7 @@ export default function NavBar() {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' }, fontSize: "3em"
+                display: { xs: 'block', md: 'none' }, fontSize: "1em"
               }}
             >
               {pages.map((page) => (
@@ -87,24 +102,30 @@ export default function NavBar() {
             </Menu>
           </Box>
       
-         
+          <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "space-evenly", fontSize: "2em", fontWeight: "20", color: "#000814"}, backgroundColor: "#d62828", padding: "30px" }}>
+              
               <Button
                 href='/'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy" }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy", marginRight: "300px"}}
               >
                See All Doggies!
               </Button>
               <Button
                 href='/newPlayerForm'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "2em", padding: "100px", fontFamily: "GoodBoy" }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy" }}
               >
                Add Your Doggy!
               </Button>
+              
           </Box>
-
+          </motion.div>
         </Toolbar>
       </Container>
       

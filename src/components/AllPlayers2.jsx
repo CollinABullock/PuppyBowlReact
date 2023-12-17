@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NavBar from "./NavBar";
+import { motion } from "framer-motion"
 
 function Copyright(props) {
   return (
@@ -83,12 +84,19 @@ export default function AllPlayers() {
         </Box>
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
+        
           <Grid container spacing={4}>
             {!error && displayedPlayers.map((players) => (
               <Grid item key={players} xs={12} sm={6} md={4}>
+                   <motion.div
+          initial={{ opacity: 0, scale: 0.5 }} // Initial state (hidden and scaled down)
+          animate={{ opacity: 1, scale: 1 }} // Animate to visible and normal size
+          transition={{ duration: 1 }} // Animation duration
+        >
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: "#491900", }}
                 >
+          
                <CardMedia
   component="div"
   sx={{
@@ -109,7 +117,9 @@ export default function AllPlayers() {
               
                   </CardActions>
                 </Card>
+                </motion.div>
               </Grid>
+              
             ))}
           </Grid>
         </Container>
