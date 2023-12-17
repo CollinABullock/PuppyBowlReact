@@ -14,6 +14,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import NavBar from './NavBar';
 
+import { motion } from "framer-motion"
+
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -68,9 +70,13 @@ export default function SinglePlayer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <NavBar />
+      <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
       <Grid container component="main" sx={{ height: '60%' }}>
         <CssBaseline />
-       
         <Grid
           item
           xs={false}
@@ -94,7 +100,9 @@ export default function SinglePlayer() {
             </Typography>
           </Box>
         </Grid>
+        
       </Grid>
+      </motion.div>
       <Box sx={{ bgcolor: '#d62828', p: 6, marginTop: "10px" }} component="footer">
       <Typography variant="h6" align="center" gutterBottom>
          Puppy Bowl
