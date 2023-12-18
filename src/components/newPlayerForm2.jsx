@@ -107,8 +107,13 @@ const handleImageChange = (e) => {
             Show us your good boy!
           </Typography>
           </motion.div>
+          <motion.div
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-        
+      
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
@@ -173,8 +178,10 @@ const handleImageChange = (e) => {
             <Grid container justifyContent="flex-end">
               <Grid item>
               </Grid>
+              
             </Grid>
           </Box>
+          </motion.div>
         </Box>
         <Copyright sx={{ mt: 5 }} />
       </Container>

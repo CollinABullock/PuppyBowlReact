@@ -60,11 +60,9 @@ export default function AllPlayers() {
       <CssBaseline />
       <NavBar />
       <main>
-      <Typography variant="h1" component="h1" sx={{paddingTop: "20px", textAlign: 'center', fontSize: "3rem"}}>
-                      {/* {Category} */}
-                    </Typography>
+     
         <Box
-         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign:"center", width: "75%", borderRadius: "20px", margin: "auto"}}
+         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign:"center", width: "75%", borderRadius: "30px", margin: "auto"}}
         >
           <Container sx={{padding: "20px"}}>
        
@@ -87,21 +85,26 @@ export default function AllPlayers() {
         
           <Grid container spacing={4}>
             {!error && displayedPlayers.map((players) => (
-              <Grid item key={players} xs={12} sm={6} md={4}>
+              <Grid item key={players} xs={12} sm={4} md={4}>
                    <motion.div
           initial={{ opacity: 0, scale: 0.5 }} // Initial state (hidden and scaled down)
           animate={{ opacity: 1, scale: 1 }} // Animate to visible and normal size
           transition={{ duration: 1 }} // Animation duration
         >
                 <Card
-                  sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: "#491900", }}
+                  sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor: "#491900", borderRadius: "30px" }}
                 >
           
                <CardMedia
   component="div"
   sx={{
-    // 16:9
+    16:9,
     pt: '56.25%',
+    height: '400px', 
+    width: '100%', 
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    borderRadius: "30px"
   }}
   image={players.imageUrl ? players.imageUrl : 'https://ik.imagekit.io/smoregear/woman%20hiking.jpg?updatedAt=1700852561792'}
 />
