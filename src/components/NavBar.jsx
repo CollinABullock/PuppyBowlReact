@@ -52,7 +52,17 @@ export default function NavBar() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-         <img src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png" alt="puppy-bowl" style={{maxWidth: "30%", height: "10%", borderRadius: "30px", margin: "0 auto"}} />
+       <img
+            src="https://i.ibb.co/yk7m6ng/cute-dog-transparent.png"
+            alt="puppy-bowl"
+            style={{
+              maxWidth: "30%",
+              height: "auto", // Maintain aspect ratio
+              borderRadius: "30px",
+              margin: "0 auto",
+              display: "block", // Ensures the image is centered properly
+            }}
+          />
          </motion.div>
 
           <Box
