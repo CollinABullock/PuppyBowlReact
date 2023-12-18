@@ -62,7 +62,7 @@ export default function AllPlayers() {
       <main>
      
         <Box
-         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign:"center", width: "75%", borderRadius: "30px", margin: "auto"}}
+         style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign:"center", width: "100%", borderRadius: "30px", margin: "auto"}}
         >
           <Container sx={{padding: "20px"}}>
        
@@ -109,11 +109,23 @@ export default function AllPlayers() {
   image={players.imageUrl ? players.imageUrl : 'https://ik.imagekit.io/smoregear/woman%20hiking.jpg?updatedAt=1700852561792'}
 />
 
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2" style={{fontFamily: "GoodBoy", color: "whitesmoke", textAlign: "center", fontSize: "2em"}}>
-                      {players.name}
-                    </Typography>
-                  </CardContent>
+<CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+  <Typography
+    gutterBottom
+    variant="h5"
+    component="h2"
+    style={{
+      fontFamily: 'GoodBoy',
+      color: 'whitesmoke',
+      textAlign: 'center',
+      fontSize: '2em',
+      margin: 'auto', // Center the text horizontally
+      height: "100px"
+    }}
+  >
+    {players.name}
+  </Typography>
+</CardContent>
                   <CardActions sx={{display: "flex", justifyContent: "center"}}>
 
                     <Button size="small" href={`/${players.id}`} sx={{fontFamily: "GoodBoy", color: "white"}}>More Details</Button>
