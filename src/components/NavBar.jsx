@@ -44,9 +44,9 @@ export default function NavBar() {
 
   return (
 <ThemeProvider theme={defaultTheme}>
-    <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
-      <Container maxWidth="100" sx={{alignContent: "center"}} >
-        <Toolbar disableGutters sx={{borderRadius: "100px", maxWidth: "90%"}} >
+    <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "0 auto", marginTop: "10px", width: "90%", padding: "10px"}}>
+      <Container maxWidth="50%" sx={{alignContent: "center", borderRadius: "100px"}} >
+        <Toolbar disableGutters sx={{maxWidth: "80%"}} >
         <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -117,19 +117,19 @@ export default function NavBar() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "space-evenly", fontSize: "2em", fontWeight: "20", color: "#000814"}, backgroundColor: "#d62828", padding: "30px" }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', justifyContent: "center", fontSize: "2em", fontWeight: "20", color: "#000814"}, backgroundColor: "#d62828", padding: "30px" }}>
               
               <Button
                 href='/'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy", marginRight: "300px"}}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy", maxWidth: "50%", marginRight: "300px"}}
               >
                See All Doggies!
               </Button>
               <Button
                 href='/newPlayerForm'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, maxWidth: "50%", color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy", margin: "0" }}
+                sx={{ my: 2, maxWidth: "50%", color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy"}}
               >
                Add Your Doggy!
               </Button>
