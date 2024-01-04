@@ -45,8 +45,8 @@ export default function NavBar() {
   return (
 <ThemeProvider theme={defaultTheme}>
     <AppBar position="static" sx={{backgroundColor: "#d62828", borderRadius: "100px", margin: "10px", width: "95vw", padding: "10px"}}>
-      <Container maxWidth="xl" sx={{alignContent: "center"}} >
-        <Toolbar disableGutters >
+      <Container maxWidth="100" sx={{alignContent: "center"}} >
+        <Toolbar disableGutters sx={{borderRadius: "100px", maxWidth: "90%"}} >
         <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -67,7 +67,7 @@ export default function NavBar() {
 
           <Box
           
-          sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite",  }}>
+          sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', }, backgroundColor: "#d62828",   color: "antiquewhite", maxWidth: "50%"  }}>
               <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -129,7 +129,7 @@ export default function NavBar() {
               <Button
                 href='/newPlayerForm'
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy" }}
+                sx={{ my: 2, maxWidth: "50%", color: 'white', display: 'block', fontSize: "1em", fontFamily: "GoodBoy", margin: "0" }}
               >
                Add Your Doggy!
               </Button>
