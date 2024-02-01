@@ -9,20 +9,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import NavBar from './NavBar';
 import { motion } from "framer-motion"
-
-
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      Collin A. Bullock
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -32,7 +19,6 @@ export default function CreateDoggy() {
   const [name, setName] = useState("");
   const [breed, setBreed] = useState("");
   const [image, setImage] = useState("");
-  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
 
@@ -85,7 +71,6 @@ const handleImageChange = (e) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
     <>
-    <NavBar />
     {/* <ThemeProvider theme={defaultTheme} > */}
     <Container component="main" maxWidth="xs" >
         <CssBaseline />
@@ -183,7 +168,6 @@ const handleImageChange = (e) => {
           </Box>
           </motion.div>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
       </Container>
     {/* </ThemeProvider> */}
     </>

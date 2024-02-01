@@ -15,18 +15,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import NavBar from "./NavBar";
 import { motion } from "framer-motion"
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-        Collin A. Bullock
-      {' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
 // TODO remove, this demo shouldn't need to reset the theme.
 const defaultTheme = createTheme();
 
@@ -58,7 +46,7 @@ export default function AllPlayers() {
   return (
 <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <NavBar />
+      
       <main>
      
         <Box
@@ -139,22 +127,6 @@ export default function AllPlayers() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      <Box sx={{ bgcolor: '#d62828', p: 6 }} component="footer">
-      <Typography variant="h6" align="center" gutterBottom>
-         Puppy Bowl
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Woof Woof!
-        </Typography>
-        <Copyright />
-      </Box>
-      {/* End footer */}
     </ThemeProvider>
   );
 }
