@@ -12,21 +12,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useState, useEffect} from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import NavBar from './NavBar';
+
 
 import { motion } from "framer-motion"
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-        Collin Bullock
-      {' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 // TODO remove, this demo shouldn't need to reset the theme.
 
@@ -69,7 +58,6 @@ export default function SinglePlayer() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <NavBar />
       <motion.div
               initial={{ opacity: 0, x: -100 }}
               animate={{ opacity: 1, x: 0 }}
@@ -104,18 +92,7 @@ export default function SinglePlayer() {
       </Grid>
       </motion.div>
       <Box sx={{ bgcolor: '#d62828', p: 6, marginTop: "10px" }} component="footer">
-      <Typography variant="h6" align="center" gutterBottom>
-         Puppy Bowl
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Woof Woof!
-        </Typography>
-        <Copyright />
+      
       </Box>
     </ThemeProvider>
   );
